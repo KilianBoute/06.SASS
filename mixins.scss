@@ -1,0 +1,15 @@
+@use 'defaults.scss' as *;
+
+@mixin shadows{
+    -webkit-box-shadow: $shadowVals;
+    -moz-box-shadow: $shadowVals;
+    box-shadow: $shadowVals;
+  }
+  
+  @mixin changeColor($newColor, $newBgColor){
+    $textColor: $newColor;
+    $bgColor: $newBgColor;
+    $textColor: blue;
+  }
+
+

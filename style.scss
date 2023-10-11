@@ -1,25 +1,6 @@
-$shadowVals: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
-$pad: 16px;
-$textColor: white;
-$bgColor: #000;
-
-@mixin shadows{
-  -webkit-box-shadow: $shadowVals;
-  -moz-box-shadow: $shadowVals;
-  box-shadow: $shadowVals;
-}
-
-@mixin changeColor($newColor, $newBgColor){
-  $textColor: $newColor;
-  $bgColor: $newBgColor;
-}
+@use 'index.scss' as *;
 
 body {
-
-  .button:hover{
-    @include changeColor(blue, blue);
-  }
-
   font: 100% "Space Mono", monospace;
   color: $textColor;
   margin: 0px;
@@ -51,7 +32,8 @@ body {
     flex-basis: 45%;
     border: 1px silver solid;
     @include shadows;
-    padding: 16px;
+    @include changeColor(blue, blue);
+    padding: $pad;
     margin: 16px;
     clear: both;
     overflow: auto;
@@ -128,4 +110,9 @@ body {
     @extend %message;
     background-color: orange;
   }
+
+  .button:hover{
+    color: red;
+  }
+
 }

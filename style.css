@@ -1,6 +1,6 @@
 body {
   font: 100% "Space Mono", monospace;
-  color: white;
+  color: WHite;
   margin: 0px;
   padding: 0px;
   background-color: #000;
@@ -56,7 +56,7 @@ body article pre.after {
 body h1,
 body h2,
 body h6 {
-  color: white;
+  color: WHite;
 }
 body h1 {
   text-align: center;
@@ -71,7 +71,7 @@ body .warning, body .error, body .success {
   border: 1px solid #ccc;
   padding: 16px;
   margin: 16px;
-  color: white;
+  color: WHite;
   background-color: #000;
 }
 body .success {
@@ -82,4 +82,7 @@ body .error {
 }
 body .warning {
   background-color: orange;
+}
+body .button:hover {
+  color: red;
 }/*# sourceMappingURL=style.css.map */
