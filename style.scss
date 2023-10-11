@@ -1,9 +1,30 @@
+$shadowVals: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
+$pad: 16px;
+$textColor: white;
+$bgColor: #000;
+
+@mixin shadows{
+  -webkit-box-shadow: $shadowVals;
+  -moz-box-shadow: $shadowVals;
+  box-shadow: $shadowVals;
+}
+
+@mixin changeColor($newColor, $newBgColor){
+  $textColor: $newColor;
+  $bgColor: $newBgColor;
+}
+
 body {
+
+  .button:hover{
+    @include changeColor(blue, blue);
+  }
+
   font: 100% "Space Mono", monospace;
-  color: #2748b3;
+  color: $textColor;
   margin: 0px;
   padding: 0px;
-  background-color: #000;
+  background-color: $bgColor;
   background-image: radial-gradient(#fff,
       rgba(255, 255, 255, 0.2) 2px,
       transparent 40px),
@@ -16,6 +37,10 @@ body {
   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
   background-attachment: fixed;
 
+  .button:hover{
+    cursor: pointer;
+  }
+
   article {
     display: flex;
     flex-wrap: wrap;
@@ -25,9 +50,7 @@ body {
     flex-grow: 1;
     flex-basis: 45%;
     border: 1px silver solid;
-    -webkit-box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
-    -moz-box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
-    box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
+    @include shadows;
     padding: 16px;
     margin: 16px;
     clear: both;
@@ -68,7 +91,7 @@ body {
   h1,
   h2,
   h6 {
-    color: #6b8eff;
+    color: $textColor;
   }
 
   h1 {
@@ -78,30 +101,31 @@ body {
   h6 {
     text-align: center;
     font-size: 2em;
-    padding: 32px;
+    padding: calc(2*$pad);
     margin-bottom: 0px;
   }
 
-  .message,
-  .success,
-  .error,
-  .warning {
+  %message
+  {
     border: 1px solid #ccc;
-    padding: 16px;
+    padding: $pad;
     margin: 16px;
-    color: #2748b3;
+    color: $textColor;
     background-color: #000;
   }
 
   .success {
+    @extend %message;
     background-color: green;
   }
 
   .error {
+    @extend %message;
     background-color: red;
   }
 
   .warning {
+    @extend %message;
     background-color: orange;
   }
 }

@@ -1,6 +1,6 @@
 body {
   font: 100% "Space Mono", monospace;
-  color: #2748b3;
+  color: white;
   margin: 0px;
   padding: 0px;
   background-color: #000;
@@ -8,6 +8,9 @@ body {
   background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
   background-attachment: fixed;
+}
+body .button:hover {
+  cursor: pointer;
 }
 body article {
   display: flex;
@@ -53,7 +56,7 @@ body article pre.after {
 body h1,
 body h2,
 body h6 {
-  color: #6b8eff;
+  color: white;
 }
 body h1 {
   text-align: center;
@@ -64,14 +67,11 @@ body h6 {
   padding: 32px;
   margin-bottom: 0px;
 }
-body .message,
-body .success,
-body .error,
-body .warning {
+body .warning, body .error, body .success {
   border: 1px solid #ccc;
   padding: 16px;
   margin: 16px;
-  color: #2748b3;
+  color: white;
   background-color: #000;
 }
 body .success {
