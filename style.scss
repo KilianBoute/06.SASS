@@ -1,6 +1,16 @@
-@use 'index.scss' as *;
+$pad: 16px;
+// $shadowVals: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
 
-body {
+
+// @mixin shadows{
+//   -webkit-box-shadow: $shadowVals;
+//   -moz-box-shadow: $shadowVals;
+//   box-shadow: $shadowVals;
+// }
+
+@mixin themes($theme-name, $textColor, $bgColor){
+
+  .#{$theme-name}{
   font: 100% "Space Mono", monospace;
   color: $textColor;
   margin: 0px;
@@ -17,6 +27,7 @@ body {
   background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
   background-attachment: fixed;
+    
 
   .button:hover{
     cursor: pointer;
@@ -31,8 +42,7 @@ body {
     flex-grow: 1;
     flex-basis: 45%;
     border: 1px silver solid;
-    @include shadows;
-    @include changeColor(blue, blue);
+    // @include shadows;
     padding: $pad;
     margin: 16px;
     clear: both;
@@ -110,9 +120,9 @@ body {
     @extend %message;
     background-color: orange;
   }
-
-  .button:hover{
-    color: red;
-  }
-
+  
 }
+}
+
+@include themes(theme-0, white, black);
+
