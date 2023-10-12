@@ -1,0 +1,4 @@
+@use 'style' as *;
+
+//theme options
+@include themes(theme-0, White, Black);

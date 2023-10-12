@@ -1,16 +1,17 @@
 $pad: 16px;
-// $shadowVals: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
+$shadowVals: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
 
 
-// @mixin shadows{
-//   -webkit-box-shadow: $shadowVals;
-//   -moz-box-shadow: $shadowVals;
-//   box-shadow: $shadowVals;
-// }
+@mixin shadows{
+  -webkit-box-shadow: $shadowVals;
+  -moz-box-shadow: $shadowVals;
+  box-shadow: $shadowVals;
+}
 
 @mixin themes($theme-name, $textColor, $bgColor){
 
   .#{$theme-name}{
+
   font: 100% "Space Mono", monospace;
   color: $textColor;
   margin: 0px;
@@ -27,7 +28,17 @@ $pad: 16px;
   background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
   background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
   background-attachment: fixed;
-    
+  
+  .bts{
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  .button{
+    margin: 0 auto;
+ 
+  }
 
   .button:hover{
     cursor: pointer;
@@ -42,7 +53,7 @@ $pad: 16px;
     flex-grow: 1;
     flex-basis: 45%;
     border: 1px silver solid;
-    // @include shadows;
+    @include shadows;
     padding: $pad;
     margin: 16px;
     clear: both;
@@ -123,6 +134,3 @@ $pad: 16px;
   
 }
 }
-
-@include themes(theme-0, white, black);
-
