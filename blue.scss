@@ -1,4 +1,12 @@
-@use 'style' as *;
+
 
 //theme options
-@include themes(theme-1, blue, white);
+//@include themes(theme-1, blue, white);
+
+
+
+@use 'style' as * with (
+    $theme-name: theme-1,
+    $textColor: blue,
+    $bgColor: white
+);

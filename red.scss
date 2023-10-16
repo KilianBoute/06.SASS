@@ -1,3 +1,7 @@
-@use 'style' as *;
 
-@include themes(theme-2, red, beige);
+
+@use 'style' as * with (
+    $theme-name: theme-2,
+    $textColor: red,
+    $bgColor: beige
+);

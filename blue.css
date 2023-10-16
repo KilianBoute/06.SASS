@@ -61,33 +61,33 @@
   float: right;
   width: 40%;
 }
-.theme-1 h1,
-.theme-1 h2,
-.theme-1 h6 {
+.theme-1 article h1,
+.theme-1 article h2,
+.theme-1 article h6 {
   color: blue;
 }
-.theme-1 h1 {
+.theme-1 article h1 {
   text-align: center;
 }
-.theme-1 h6 {
+.theme-1 article h6 {
   text-align: center;
   font-size: 2em;
   padding: 32px;
   margin-bottom: 0px;
 }
-.theme-1 .warning, .theme-1 .error, .theme-1 .success {
+.theme-1 article .warning, .theme-1 article .error, .theme-1 article .success {
   border: 1px solid #ccc;
   padding: 16px;
   margin: 16px;
   color: blue;
   background-color: #000;
 }
-.theme-1 .success {
+.theme-1 article .success {
   background-color: green;
 }
-.theme-1 .error {
+.theme-1 article .error {
   background-color: red;
 }
-.theme-1 .warning {
+.theme-1 article .warning {
   background-color: orange;
 }/*# sourceMappingURL=blue.css.map */

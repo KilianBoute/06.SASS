@@ -1,6 +1,9 @@
 $pad: 16px;
 $shadowVals: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
 
+$theme-name: theme-0 !default;
+$textColor: white !default;
+$bgColor: Black !default;
 
 @mixin shadows{
   -webkit-box-shadow: $shadowVals;
@@ -8,7 +11,7 @@ $shadowVals: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
   box-shadow: $shadowVals;
 }
 
-@mixin themes($theme-name, $textColor, $bgColor){
+// @mixin themes($theme-name, $textColor, $bgColor){
 
   .#{$theme-name}{
 
@@ -47,26 +50,24 @@ $shadowVals: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
   article {
     display: flex;
     flex-wrap: wrap;
-  }
 
-  article section {
-    flex-grow: 1;
-    flex-basis: 45%;
-    border: 1px silver solid;
-    @include shadows;
-    padding: $pad;
-    margin: 16px;
-    clear: both;
-    overflow: auto;
-    box-sizing: border-box;
-  }
+    section {
+      flex-grow: 1;
+      flex-basis: 45%;
+      border: 1px silver solid;
+      @include shadows;
+      padding: $pad;
+      margin: 16px;
+      clear: both;
+      overflow: auto;
+      box-sizing: border-box;
+    }
+    section#selling-points {
+      flex-grow: 2;
+      flex-basis: 100%;
+    }
 
-  article section#selling-points {
-    flex-grow: 2;
-    flex-basis: 100%;
-  }
-
-  article pre {
+  pre {
     background: #000;
     border: 1px solid #ddd;
     color: #666;
@@ -81,12 +82,12 @@ $shadowVals: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
     white-space: pre-wrap;
   }
 
-  article pre.before {
+  pre.before {
     float: left;
     width: 40%;
   }
 
-  article pre.after {
+  pre.after {
     float: right;
     width: 40%;
   }
@@ -131,6 +132,6 @@ $shadowVals: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
     @extend %message;
     background-color: orange;
   }
-  
 }
 }
+//}
